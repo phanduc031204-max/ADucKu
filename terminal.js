@@ -58,6 +58,16 @@ inputElement.addEventListener('keypress', function (e) {
           `</span>` +
           `Nạp nhiên liệu thành công! Code tiếp thôi. ☕`;
         break;
+        case 'deface':
+        responseLine.className = 't-out t-warn';
+        responseLine.innerHTML = "[!] CẢNH BÁO: Bật chế độ Deface. Bây giờ bạn có thể click vào bất kỳ chữ nào trên trang web này và sửa nó!";
+        
+        // Tuyệt chiêu biến toàn bộ trang web thành một trình soạn thảo văn bản
+        document.designMode = "on";
+        
+        // Đổi màu nền xíu cho nó có không khí
+        document.body.style.boxShadow = "inset 0 0 50px rgba(239, 68, 68, 0.3)";
+        break;
         case 'ping':
       case 'ping 8.8.8.8':
         responseLine.innerHTML = 
