@@ -29,8 +29,8 @@ inputElement.addEventListener('keypress', function (e) {
     responseLine.className = 't-out';
 
     switch (cmd) {
-      case 'help':
-        responseLine.innerHTML = "Available commands: <span class='t-ok'>whoami, skills, gym, ride, cat note.txt, clear</span>";
+     case 'help':
+        responseLine.innerHTML = "Available commands: <span class='t-ok'>whoami, skills, projects, exploit, hire, coffee, ping, hack, date, clear</span>";
         break;
         
       case 'whoami':
@@ -47,19 +47,48 @@ inputElement.addEventListener('keypress', function (e) {
           `<span style="color: var(--cyan)">[MỤC TIÊU]</span> Thâm hụt calo<br>` +
           `<span style="color: var(--cyan)">[ROUTINE]</span> Tập bụng 4 bài (15x4 set) & Đạp xe 1h10p.`;
         break;
-
-      case 'ride':
+        case 'coffee':
         responseLine.innerHTML = 
-          `<span style="color: var(--muted)">` +
-          `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;,--.\n` +
-          `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/.--.\\\n` +
-          `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|====|<br>` +
-          `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|\\__/|<br>` +
-          `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__//&nbsp;&nbsp;\\\\__<br>` +
-          `&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;\\&nbsp;&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;\\<br>` +
-          `&nbsp;&nbsp;&nbsp;/____\\__/__/\\<br>` +
+          `<span style="color: var(--amber)">` +
+          `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)))<br>` +
+          `&nbsp;&nbsp;&nbsp;&nbsp;(((<br>` +
+          `&nbsp;&nbsp;+-----+<br>` +
+          `&nbsp;&nbsp;|     |]<br>` +
+          `&nbsp;&nbsp;\`-----'<br>` +
           `</span>` +
-          `Vroom vroom... Đề ba con Sirius/Nouvo lượn phố nào! 🏍️`;
+          `Nạp nhiên liệu thành công! Code tiếp thôi. ☕`;
+        break;
+        case 'ping':
+      case 'ping 8.8.8.8':
+        responseLine.innerHTML = 
+          `PING 8.8.8.8 (8.8.8.8): 56 data bytes<br>` +
+          `64 bytes from 8.8.8.8: icmp_seq=0 ttl=115 time=14.2 ms<br>` +
+          `64 bytes from 8.8.8.8: icmp_seq=1 ttl=115 time=15.1 ms<br>` +
+          `64 bytes from 8.8.8.8: icmp_seq=2 ttl=115 time=13.8 ms<br>` +
+          `--- 8.8.8.8 ping statistics ---<br>` +
+          `3 packets transmitted, 3 packets received, 0.0% packet loss`;
+        break;
+        case 'hack':
+        responseLine.className = 't-out t-warn';
+        responseLine.innerHTML = 
+          `Initializing Exploit Framework...<br>` +
+          `[+] Targeting visitor's IP address...<br>` +
+          `[+] Bypassing firewall... <span style="color: var(--green)">Done</span><br>` +
+          `[+] Downloading browser history... <span style="color: var(--green)">Done</span><br>` +
+          `[!] Cảnh báo: Lịch sử duyệt web của bạn chứa quá nhiều tài liệu học tập! Đang tiến hành mã hóa... 😈 (Đùa thôi!)`;
+        break;
+        case 'date':
+        const now = new Date();
+        responseLine.innerHTML = `System Time: <span style="color: var(--cyan)">${now.toString()}</span>`;
+        break;
+        
+       case 'hire':
+        responseLine.className = 't-out t-ok';
+        responseLine.innerHTML = 
+          `[HỆ THỐNG] Phát hiện tín hiệu từ Nhà tuyển dụng!<br>` +
+          `Mức độ phù hợp: 99.9%<br>` +
+          `Tình trạng: Đang chờ một lời mời thực tập/part-time.<br>` +
+          `Hãy liên hệ ngay qua email: <a href="mailto:email-cua-ban@gmail.com" style="color: var(--accent2)">email-cua-ban@gmail.com</a> 🚀`;
         break;
 
       case 'cat note.txt':
