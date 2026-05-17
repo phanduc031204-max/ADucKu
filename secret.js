@@ -77,3 +77,12 @@ function showSecretMessage() {
   console.log("Secret message unlocked!");
   alert("🔓 MỞ KHÓA THÔNG ĐIỆP BÍ MẬT:\n\nCode web này tuy có thể còn vài cái bug, nhưng được gặp Duyên chắc chắn là tính năng hoàn hảo nhất của anh rồi! 😉");
 }
+let docTitle = document.title;
+window.addEventListener('blur', () => {
+  // Khi người dùng chuyển sang tab khác
+  document.title = "Này, quên tắt tab à? 💻";
+});
+window.addEventListener('focus', () => {
+  // Khi người dùng quay lại
+  document.title = docTitle;
+});
