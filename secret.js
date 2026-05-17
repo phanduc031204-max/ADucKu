@@ -80,7 +80,7 @@ function showSecretMessage() {
 let docTitle = document.title;
 window.addEventListener('blur', () => {
   // Khi người dùng chuyển sang tab khác
-  document.title = "Này, quên tắt tab à? 💻";
+  document.title = "Sao ko ở lại chơi với bé ? 💻";
 });
 window.addEventListener('focus', () => {
   // Khi người dùng quay lại
